@@ -1,6 +1,11 @@
-# MovieInstagram
+# Movie Instagram
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
+
+## Json-server (Fake Rest API)
+Start JSON Server: Run `json-server --watch db.json`
+
+Endpoints: `http://localhost:3000/likes` / `http://localhost:3000/posts` / `http://localhost:3000/comments`
 
 ## Development server
 

@@ -1,0 +1,35 @@
+<div class="row">
+  <mat-toolbar class="toolbar">
+    <span>Movie Instagram</span>
+  </mat-toolbar>
+</div>
+
+<div class="row dashboard">
+  <div class="col-md-6 col-content">
+    <div class="user-info">
+      <img src="../../../assets/images/{{activatedUser}}.png" alt="{{activatedUser}}">
+      <div>
+        <h3><strong>{{activatedUser}}</strong></h3>
+        <p><strong>{{userPosts}}</strong> Posts</p>
+        <p><strong>{{userComments}}</strong> Comentários</p>
+        <p><strong>{{userLikes}}</strong> Curtidas</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-content">
+    <mat-card class="user-select-card">
+      <h2>Visualizar timeline com:</h2>
+      <mat-tab-group class="tab-group" mat-align-tabs="center" animationDuration="0ms">
+        <mat-tab *ngFor="let user of users">
+          <ng-template mat-tab-label>
+            <div class="user" (click)="getUserInfo(user)">
+              <img src="../../../assets/images/{{user}}.png" alt="{{user}}">
+              {{user}}
+            </div>
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>
+</div>

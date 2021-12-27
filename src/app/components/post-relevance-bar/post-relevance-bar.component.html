@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="icon-group">
+    <button *ngIf="!liked" mat-icon-button color="warn" [matTooltip]="likesString" (click)="createLike()">
+      <mat-icon>favorite_border</mat-icon>
+    </button>
+    <button *ngIf="liked" mat-icon-button color="warn" [matTooltip]="likesString" (click)="removeLike()">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <span>{{likesLength}}</span>
+  </div>
+
+  <div class="icon-group comments">
+    <mat-icon> speaker_notes_icon </mat-icon>
+    <span>{{commentsLength}}</span>
+  </div>
+</div>

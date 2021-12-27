@@ -1,0 +1,29 @@
+<div class="row" *ngFor="let post of posts | async" >
+  <mat-card class="card">
+    <div class="row">
+      <div class="col-md-6 col-content-poster">
+        <div class="imgBox">
+          <img class="poster" src="{{post.picture}}" alt="Foto do filme">
+        </div>
+      </div>
+
+      <div class="col-md-6 col-content-info">
+        <div class="post-info">
+          <div class="post-user">
+            <div class="post-user-info">
+              <img src="../../../assets/images/{{post.user}}.png" alt="{{post.user}}">
+              <span><strong>{{post.user}}</strong></span>
+            </div>
+            <p>{{post.title}}</p>
+          </div>
+          <div>
+            <app-post-relevance-bar [postId]="post.id"></app-post-relevance-bar>
+          </div>
+          <div>
+            <app-comments [postId]="post.id"></app-comments>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>

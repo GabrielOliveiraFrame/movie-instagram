@@ -1,0 +1,29 @@
+<div class="row">
+  <mat-card class="card" *ngFor="let comment of comments" >
+    <div class="row card-content">
+      <div class="col-md-12 user col-sm-6 user">
+        <img src="../../../assets/images/{{comment.user}}.png" alt="{{comment.user}}">
+        <span><strong>{{comment.user}}</strong></span>
+      </div>
+      <div class="col-md-12 col-sm-6 comment">
+        <p>{{comment.comment}}</p>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<div class="row">
+  <form [formGroup]="form">
+    <div class="row form-content">
+      <div class="col col-md-8">
+        <mat-form-field class="input">
+          <mat-label>Comentar</mat-label>
+          <input formControlName="comment" autocomplete="off" matInput>
+        </mat-form-field>
+      </div>
+      <div class="col col-md-4">
+        <button mat-stroked-button color="primary" (click)="onSubmit()">Enviar</button>
+      </div>
+    </div>
+  </form>
+</div>
